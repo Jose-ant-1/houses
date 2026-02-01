@@ -22,7 +22,6 @@ export class HousingService {
     return (await data.json()) ?? undefined;
   }
 
-  // Solución al error TS2339
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Solicitud recibida: ${firstName} ${lastName}, ${email}.`);
   }
