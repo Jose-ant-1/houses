@@ -1,0 +1,16 @@
+<section class="results">
+  @for (location of housingLocationList; track location.id) {
+    <article class="listing">
+      <img [src]="location.photo" alt="Exterior" class="listing-photo">
+      <h2>{{ location.name }}</h2>
+      <p>{{ location.city }}, {{ location.state }}</p>
+
+      <p>Precio: {{ location.price }}€</p>
+      <p>Estado: {{ location.available ? 'Disponible' : 'No disponible' }}</p>
+
+      <a [routerLink]="['/details', location.id]">Ver detalles</a>
+    </article>
+  } @empty {
+    <p>Esperando datos...</p>
+  }
+</section>

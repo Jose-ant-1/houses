@@ -1,0 +1,94 @@
+article {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+article img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.listing-heading {
+  font-size: 48pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.listing-location::before {
+  content: '📍';
+}
+
+.listing-features {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--secondary-color);
+  border-radius: 20px;
+}
+
+.section-heading {
+  color: var(--primary-color);
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el Formulario */
+.listing-apply {
+  margin-top: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10pt;
+}
+
+input {
+  font-size: 16pt;
+  padding: 10px;
+  /* Cambiamos el borde para que sea visible siempre */
+  border: solid 2px #605DC8;
+  background-color: white; /* Fondo blanco para que destaque sobre el fondo lila claro */
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Añadimos un efecto cuando pasas el ratón por encima (hover) */
+input:hover {
+  border-color: #4a47a3;
+  background-color: #fdfdff;
+}
+
+/* El efecto focus que ya tienes, pero más pronunciado */
+input:focus {
+  outline: none;
+  border-color: #4a47a3;
+  box-shadow: 0 0 5px rgba(96, 93, 200, 0.3);
+}
+
+button.primary {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16pt;
+  margin-top: 10px;
+}
+
+button.primary:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}

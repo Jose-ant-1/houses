@@ -1,0 +1,52 @@
+{
+  "locations": [
+    {
+      "id": 0,
+      "name": "Acme Fresh Start Housing",
+      "city": "Chicago",
+      "state": "IL",
+      "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKpM6Ogrx8-unsplash.jpg",
+      "availableUnits": 4,
+      "wifi": true,
+      "laundry": true,
+      "coordinate": {
+        "latitude": 41.8781,
+        "longitude": -87.6298
+      },
+      "price": 1200,
+      "available": true
+    },
+    {
+      "id": 1,
+      "name": "A113 Transitional Housing",
+      "city": "Santa Monica",
+      "state": "CA",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "availableUnits": 0,
+      "wifi": false,
+      "laundry": true,
+      "coordinate": {
+        "latitude": 34.0195,
+        "longitude": -118.4912
+      },
+      "price": 2500,
+      "available": false
+    },
+    {
+      "id": 2,
+      "name": "Warm Beds Housing Support",
+      "city": "Juneau",
+      "state": "AK",
+      "photo": "https://angular.io/assets/images/tutorials/faa/i-had-a-ghost-73_NSqLbhiU-unsplash.jpg",
+      "availableUnits": 1,
+      "wifi": false,
+      "laundry": false,
+      "coordinate": {
+        "latitude": 58.3019,
+        "longitude": -134.4197
+      },
+      "price": 950,
+      "available": true
+    }
+  ]
+}

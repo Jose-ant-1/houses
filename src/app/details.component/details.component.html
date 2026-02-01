@@ -1,0 +1,55 @@
+@if (housingLocation) {
+  <article>
+    <img [src]="housingLocation.photo" alt="Exterior of {{housingLocation.name}}">
+    <section class="listing-description">
+      <h2 class="listing-heading">{{housingLocation.name}}</h2>
+      <p class="listing-location">{{housingLocation.city}}, {{housingLocation.state}}</p>
+    </section>
+
+    <section class="listing-features">
+      <h2 class="section-heading">About this location</h2>
+      <ul>
+        <li>Units available: {{housingLocation.availableUnits}}</li>
+        <li>Price: {{housingLocation.price}}€</li>
+        <li>Status: {{housingLocation.available ? 'Available' : 'Not available'}}</li>
+      </ul>
+    </section>
+
+    @if (weatherData) {
+      <section class="listing-features">
+        <h2 class="section-heading">Tiempo actual en {{ housingLocation?.city }}</h2>
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <img [src]="weatherData.current.condition.icon" alt="Icono clima">
+          <div>
+            <p style="font-size: 1.5rem; font-weight: bold;">{{ weatherData.current.temp_c }}°C</p>
+            <p>{{ weatherData.current.condition.text }}</p>
+          </div>
+        </div>
+      </section>
+    }
+
+    <section class="listing-apply">
+      <h2 class="section-heading">Apply now to live here</h2>
+      <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" formControlName="firstName">
+        @if (applyForm.get('firstName')?.invalid && applyForm.get('firstName')?.dirty) {
+          <p style="color: red; font-size: 0.8rem;">Por favor, introduce un nombre válido.</p>
+        }
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" formControlName="lastName">
+        @if (applyForm.get('lastName')?.invalid && applyForm.get('lastName')?.dirty) {
+          <p style="color: red; font-size: 0.8rem;">Por favor, introduce un apellido válido.</p>
+        }
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+        @if (applyForm.get('email')?.invalid && applyForm.get('email')?.dirty) {
+          <p style="color: red; font-size: 0.8rem;">Por favor, introduce un email válido.</p>
+        }
+        <button type="submit" [disabled]="applyForm.invalid" class="primary">Apply now</button>
+      </form>
+    </section>
+  </article>
+} @else {
+  <p>Loading house details...</p>
+}
