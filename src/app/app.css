@@ -1,26 +1,10 @@
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: white;
-}
-
 .brand-name {
   padding: 20px;
-  /* Forzamos el color de fondo usando la variable */
-  background-color: var(--primary-color);
   border-bottom: solid 1px var(--secondary-color);
 }
 
 .brand-name h1 {
-  /* Si el fondo es azul, el texto debe ser blanco */
-  color: white;
+  color: var(--primary-color);
   font-size: 24px;
 }
 
@@ -28,7 +12,9 @@ body {
   padding: 20px;
 }
 
-.brand-name a {
-  text-decoration: none; /* Quita el subrayado */
-  color: inherit;       /* Mantiene el color del h1 */
+/* Estilo básico para el buscador del tutorial */
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
 }
